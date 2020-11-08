@@ -65,7 +65,10 @@ if SERVER then
 
             timer.Simple(3, function()
                 martyr:Explode(tr)
-                ply.shouldmartyr = false -- No need to explode again, you have fufilled your purpose
+
+                if IsValid(ply) then
+                    ply.shouldmartyr = false -- No need to explode again, you have fufilled your purpose
+                end
             end)
         end
     end)

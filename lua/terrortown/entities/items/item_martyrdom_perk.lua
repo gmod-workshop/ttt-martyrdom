@@ -10,7 +10,7 @@ else
     LANG.AddToLanguage("english", "martyrdom_perk_corpse", "This body had a live grenade on it!\n")
 end
 
-ITEM.hud = Material("vgui/ttt/perks/martyrdom_perk_hud.png")
+ITEM.hud = Material("vgui/ttt/item_hud_effect_martyrdom.png")
 ITEM.EquipMenuData = {
 	type = "item_passive",
 	name = "martyrdom_perk_name",
@@ -42,7 +42,10 @@ if SERVER then
 
             timer.Simple(3, function()
                 martyr:Explode(tr)
-                ply.shouldmartyr = false -- No need to explode again, you have fufilled your purpose
+
+                if IsValid(ply) then
+                    ply.shouldmartyr = false -- No need to explode again, you have fufilled your purpose
+                end
             end)
         end
     end)

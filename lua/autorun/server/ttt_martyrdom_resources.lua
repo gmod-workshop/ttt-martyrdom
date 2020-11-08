@@ -3,5 +3,6 @@
 if ( SERVER ) then
 	resource.AddFile( "materials/vgui/ttt/exho_martyrdom.png" )
 	resource.AddFile( "materials/vgui/ttt/perks/martyrdom_perk_hud.png" )
+	resource.AddFile( "materials/vgui/ttt/item_hud_effect_martyrdom.png" )
 	resource.AddFile( "sound/matyrdom/grenade_bounce.mp3" )
 end
